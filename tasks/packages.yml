@@ -1,0 +1,7 @@
+- name: Install packages
+  apt: name={{items}}
+  with_items:
+     -cura
+     -fritzing		
+     -python 2.6
+     -thonny

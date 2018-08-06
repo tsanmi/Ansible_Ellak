@@ -1,0 +1,12 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    -name: update repos
+     apt:
+        -update_cache=yes
+        -upgrade=full
+     changed_when: false
+
+
+  tasks:
+    -include: tasks/packages.yml	
