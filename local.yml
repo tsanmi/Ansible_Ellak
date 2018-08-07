@@ -1,10 +1,9 @@
 - hosts: localhost
   become: true
   pre_tasks:
-    -name: update repos
-     apt:update_cache=yes upgrade=yes                          
-     
-
+    - name: update repositories
+      apt: update_cache=yes upgrade=yes
+      changed_when: False
 
   tasks:
-    -include: tasks/packages.yml	
+    - include: tasks/packages.yml
