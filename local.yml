@@ -11,7 +11,7 @@
       
     - name: add repository for chrome
       apt_repository: 
-        repo: http://dl.google.com/linux/chrome/deb/ stable main 
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
         filename: google
       
     - name: update repositories
