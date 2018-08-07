@@ -13,6 +13,10 @@
       apt_repository: 
         repo: deb http://dl.google.com/linux/chrome/deb/ stable main
         filename: google
+        
+     -name: add repository for brackets
+        apt_repository:
+         repo: ppa:webupd8team/brackets   
       
     - name: update repositories
       apt: update_cache=yes upgrade=yes
