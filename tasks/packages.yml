@@ -3,5 +3,5 @@
   with_items:
      -cura
      -fritzing		
-     -python 2.6
+     -python 2.7
      -thonny
