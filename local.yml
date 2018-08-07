@@ -10,7 +10,9 @@
         state: present
       
     - name: add repository for chrome
-      apt_repository: url= http://dl.google.com/linux/chrome/deb/ stable main filename=google
+      apt_repository: 
+        url: http://dl.google.com/linux/chrome/deb/ stable main 
+        filename: google
       
     - name: update repositories
       apt: update_cache=yes upgrade=yes
