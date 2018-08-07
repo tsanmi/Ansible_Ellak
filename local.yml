@@ -2,7 +2,7 @@
   become: true
   pre_tasks:
     - name: add key
-      apt_key:  url =https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
+      apt-key:  url =https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
     - name: add repository for chrome
       apt_repository: url= http://dl.google.com/linux/chrome/deb/ stable main filename=google
     - name: update repositories
