@@ -1,10 +1,13 @@
 - hosts: localhost
   become: true
   pre_tasks:
-   
-    - name: update repositories
-      apt: update_cache=yes upgrade=yes
-      changed_when: False
+    - name: add key
+      apt-key:  url =https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
+      
+    - name: add repository for chrome
+      apt_repository: url= http://dl.google.com/linux/chrome/deb/ stable main filename=google
+      
+
 
   tasks:
     - include: tasks/packages.yml
