@@ -3,7 +3,7 @@
   pre_tasks:
     -name: update repos
      apt:update_cache=yes upgrade=yes                          
-     changed_when: False
+     
 
 
   tasks:
