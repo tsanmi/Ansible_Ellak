@@ -1,7 +1,8 @@
-- name: Install packages
-  apt: name={{item}}
+- name: install basic packages
+  action: >
+    {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
   with_items:
-     -cura
-     -fritzing		
-     -python 2.7
-     -thonny
+    - cura
+    - python 2.7
+    - fritzing
+    - thonny	
