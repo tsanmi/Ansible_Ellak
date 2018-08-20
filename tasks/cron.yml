@@ -1,0 +1,5 @@
+-name: install cron job (ansible-pull) -->weekly!<---
+ cron:
+    user: "ansible"
+    special_time: weekly
+    job: /usr/bin/ansible-pull -o -U https://github.com/<github_user>/ansible.git > /dev/null
