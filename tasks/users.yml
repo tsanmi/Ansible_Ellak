@@ -1,4 +1,6 @@
--name: Creating the user
- user: 
-    name: ansible 
+- name: creating the user
+  user:
+    name: ansible
     uid: 900
+    
+    
