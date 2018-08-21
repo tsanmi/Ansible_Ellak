@@ -1,4 +1,4 @@
-- name: install cron job (ansible-pull) -->weekly!<---
+- name: install cron job (ansible-pull) -->daily!<---
   cron:
     user: "ansible"
     special_time: daily
